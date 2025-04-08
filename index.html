@@ -7,6 +7,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <style>
+        /* Smooth transition */
+        body {
+            transition: background-color 1s, color 1s;
+        }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -16,6 +22,7 @@
         </a>
         <ul class="nav nav-pills">
           <li class="nav-item"><a href="#bio" class="nav-link active" aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="#news" class="nav-link">News</a></li>
           <li class="nav-item"><a href="#publications" class="nav-link">Publications</a></li>
           <li class="nav-item"><a href="#software" class="nav-link">Software</a></li>
           <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
@@ -25,120 +32,152 @@
 
     <div class="container py-3" id="bio">
       <h2 class="fs-4 pb-2 border-bottom">Bio</h2>
-      <p>I am a staff member at <a href="https://www.sandia.gov/">Sandia National Laboratories</a> in Livermore, California. I joined the lab in June 2020 as a postdoctoral appointee working with <a href="https://www.sandia.gov/crf/staff/habib-n-najm/">Habib Najm</a>. I obtained my PhD in Computer Science at <a href="https://www.kuleuven.be/english/kuleuven">KU Leuven</a>, supervised by prof. <a href="https://people.cs.kuleuven.be/~stefan.vandewalle/">Stefan Vandewalle</a> and prof. <a href="https://people.cs.kuleuven.be/~dirk.nuyens/">Dirk Nuyens</a>.
-      <p>My primary research interests lie in the field of uncertainty quantification and statistical learning, where I focus on the development and application of advanced methodologies to enhance the predictive capabilities of large-scale physical and computational models.</p> 
+      <div class="row">
+        <div class="col-md-4">
+          <img src="assets/images/portrait.jpeg" alt="Pieterjan Robbe" class="img-fluid">
+        </div>
+        <div class="col-md-8">
+          <p>Since June 2023, I am a senior member of technical staff at <a href="https://www.sandia.gov/">Sandia National Laboratories</a> in Livermore, California. I joined the lab in June 2020 as a postdoctoral appointee working with <a href="https://www.sandia.gov/crf/staff/habib-n-najm/">Habib Najm</a>. I obtained my PhD in Computer Science at <a href="https://www.kuleuven.be/english/kuleuven">KU Leuven</a>, supervised by prof. <a href="https://people.cs.kuleuven.be/~stefan.vandewalle/">Stefan Vandewalle</a> and prof. <a href="https://people.cs.kuleuven.be/~dirk.nuyens/">Dirk Nuyens</a>.</p>
+          <p>My primary research interests lie in the field of uncertainty quantification and machine learning (UQ/ML), where I focus on the development and application of advanced methodologies to enhance the predictive capabilities of large-scale physical and computational models.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-3" id="news">
+      <h2 class="fs-4 pb-2 border-bottom">News</h2>
+      <ul>
+        <li>
+          I will present our work on Multifidelity Bayesian Optimization for Steady-State Predictions using Gyrokinetic Simulations of Plasma Turbulence at the 11<sup>th</sup> International Conference on Coupled Problems in Science and Engineering (COUPLED) in Villasimius (Sardinia), Italy, May 25-28, 2025.
+        </li>
+        <li>
+          I will be attending the 6<sup>th</sup> International Conference on Uncertainty Quantification in Computational Science and Engineering (UNCECOMP) in Rhodes, Greece, June 15-18, 2025.
+        </li>
+        <li>
+          I will present our work on Multilevel Quasi-Monte Carlo (MLQMC) without replications at the 18<sup>th</sup> U.S. National congress on computational mechanics (USNNCM) in Chicago, U.S., July 20-24, 2025.
+        </li>
+        <li>
+          I will attend the International Conference on Monte Carlo Methods and Applications (MCM) in Chicago, U.S., July 28 to August 1, 2025.
+        </li>
+      </ul>
     </div>
 
     <div class="container py-3" id="publications">
       <h2 class="fs-4 pb-2 border-bottom">Publications</h2>
-      <p>&ast; indicates equal contribution</p>
       <ol reversed>
+        <li class="mt-2">
+          Tran, A., <b>Robbe, P.</b>, Rodgers, T., and Lim, H. Multi-fidelity Uncertainty Quantification for Homogenization Problems in Structure-Property Relationships from Crystal Plasticity Finite Elements. <i>JOM</i> 76 (2024), pp. 3007-3020
+          <a href="https://link.springer.com/article/10.1007/s11837-023-06182-x" class="badge text-bg-primary rounded-pill" style="margin-left: 10px; text-decoration:none">Article</a>
+          <a href="https://www.osti.gov/pages/servlets/purl/2320353" class="badge text-bg-success rounded-pill" style="margin-left: 10px; text-decoration:none">Preprint</a>
+          <a href="#" class="badge text-bg-secondary rounded-pill cite-button" data-bs-toggle="modal" data-bs-target="#bibtexModal" data-bibtex="@article{tran2024,\n  title   = {Multi-fidelity uncertainty quantification for homogenization problems in structure-property relationships from crystal plasticity finite elements},\n  author  = {Tran, Anh and Robbe, Pieterjan and Rodgers, Theron and Lim, Hojun},\n  journal = {JOM},\n  volume  = {76},\n  number  = {6},\n  pages   = {3007--3020},\n  year    = {2024}\n }" style="margin-left: 10px; text-decoration: none;">Cite</a>
+        </li>
         <li class="mt-2">
           <b>Robbe, P.</b> GaussianRandomFields.jl: A Julia package to generate and sample from Gaussian random fields. <i>Journal of Open Source Software</i> 8, 89 (2023), 5595
           <a href="https://joss.theoj.org/papers/10.21105/joss.05595" class="badge text-bg-primary rounded-pill" style="margin-left: 10px; text-decoration:none">Article</a>
-          <a href="https://scholar.google.com/scholar?q=GaussianRandomFields.jl%3A+A+Julia+package+to+generate+and+sample+from+Gaussian+random+fields" class="badge text-bg-secondary rounded-pill" style="margin-left: 10px; text-decoration:none">Cite</a>
+          <a href="#" class="badge text-bg-secondary rounded-pill cite-button" data-bs-toggle="modal" data-bs-target="#bibtexModal" data-bibtex="@article{robbe2023,\n  title   = {{GaussianRandomFields. jl}: {A} {J}ulia package to generate and sample from {G}aussian random fields},\n  author  = {Robbe, Pieterjan},\n  journal = {Journal of Open Source Software},\n  volume  = {8},\n  number  = {89},\n  pages   = {5595},\n  year    = {2023}\n }" style="margin-left: 10px; text-decoration: none;">Cite</a>
         </li>
         <li class="mt-2">
           Tran, A., <b>Robbe, P.</b>, and Lim, H. Multi-faceted Uncertainty Quantification for Structure-Property Relationship with Crystal Plasticity Finite Element. In <i>Proceedings of the TMS Annual Meeting &amp; Exhibition</i> (2023). The Minerals, Metals &amp; Materials Series, pp. 596-606
           <a href="https://link.springer.com/chapter/10.1007/978-3-031-22524-6_53" class="badge text-bg-primary rounded-pill" style="margin-left: 10px; text-decoration:none">Article</a>
           <a href="https://arxiv.org/abs/2312.00012" class="badge text-bg-success rounded-pill" style="margin-left: 10px; text-decoration:none">Preprint</a>
-          <a href="https://scholar.google.com/scholar?q=Multi-faceted+Uncertainty+Quantification+for+Structure-Property+Relationship+with+Crystal+Plasticity+Finite+Element" class="badge text-bg-secondary rounded-pill" style="margin-left: 10px; text-decoration:none">Cite</a>
+          <a href="#" class="badge text-bg-secondary rounded-pill cite-button" data-bs-toggle="modal" data-bs-target="#bibtexModal" data-bibtex="@inproceedings{tran2023b,\n  title     = {Multi-faceted uncertainty quantification for structure-property relationship with crystal plasticity finite element},\n  author    = {Tran, Anh and Robbe, Pieterjan and Lim, Hojun},\n  booktitle = {Proceedings of the \\nth{152} TMS Annual Meeting \\&amp; Exhibition. The Minerals, Metals \&amp; Materials Series},\n  pages     = {596--606},\n  year      = {2023}\n }" style="margin-left: 10px; text-decoration: none;">Cite</a>
         </li>
         <li class="mt-2">
           Tran, A.&ast;, <b>Robbe, P.</b>&ast;, and Lim, H. Multi-fidelity microstructure-induced uncertainty quantification by advanced Monte Carlo methods. <i>Materialia</i> 27, 101705 (2023), pp. 1-38
           <a href="https://www.sciencedirect.com/science/article/abs/pii/S2589152923000339" class="badge text-bg-primary rounded-pill" style="margin-left: 10px; text-decoration:none">Article</a>
           <a href="https://arxiv.org/abs/2302.04221" class="badge text-bg-success rounded-pill" style="margin-left: 10px; text-decoration:none">Preprint</a>
-          <a href="https://scholar.google.com/scholar?q=Multi-fidelity+microstructure-induced+uncertainty+quantification+by+advanced+Monte+Carlo+methods" class="badge text-bg-secondary rounded-pill" style="margin-left: 10px; text-decoration:none">Cite</a>
+          <a href="#" class="badge text-bg-secondary rounded-pill cite-button" data-bs-toggle="modal" data-bs-target="#bibtexModal" data-bibtex="@article{tran2023a,\n  title   = {Multi-fidelity microstructure-induced uncertainty quantification by advanced {M}onte {C}arlo methods},\n  author  = {Tran, Anh and Robbe, Pieterjan and Lim, Hojun},\n  journal = {Materialia},\n  volume  = {27},\n  pages   = {101705},\n  year    = {2023}\n }" style="margin-left: 10px; text-decoration: none;">Cite</a>
         </li>
+        
         <li class="mt-2">
           <b>Robbe, P.</b>, Andersson, A., Bonnet, L., Casey, T., Cooper, M. W. D., Matthews, C., Sargsyan, K., Najm, H. N. Bayesian calibration with summary statistics for the prediction of xenon diffusion in UO&#8322; nuclear fuel. <i>Computational Materials Science</i> 225, 112184 (2023), pp. 1-38
           <a href="https://www.sciencedirect.com/science/article/abs/pii/S0927025623001787" class="badge text-bg-primary rounded-pill" style="margin-left: 10px; text-decoration:none">Article</a>
           <a href="https://arxiv.org/abs/2302.10227" class="badge text-bg-success rounded-pill" style="margin-left: 10px; text-decoration:none">Preprint</a>
-          <a href="https://scholar.google.com/scholar?q=Bayesian+calibration+with+summary+statistics+for+the+prediction+of+xenon+diffusion+in+UO2+nuclear+fuel" class="badge text-bg-secondary rounded-pill" style="margin-left: 10px; text-decoration:none">Cite</a>
+          <a href="#" class="badge text-bg-secondary rounded-pill cite-button" data-bs-toggle="modal" data-bs-target="#bibtexModal" data-bibtex="@article{robbe2023,\n  title   = {Bayesian calibration with summary statistics for the prediction of xenon diffusion in \ce{UO2} nuclear fuel},\n  author  = {Robbe, Pieterjan and Andersson, David and Bonnet, Luc and Casey, Tiernan A and Cooper, Michael WD and Matthews, Christopher and Sargsyan, Khachik and Najm, Habib N},\n  journal = {Computational Materials Science},\n  volume  = {225},\n  pages   = {112184},\n  year    = {2023}\n }" style="margin-left: 10px; text-decoration: none;">Cite</a>
         </li>
         <li class="mt-2">
           <b>Robbe, P.</b>, Blondel, S., Casey, T. A., Lasa, A., Sargsyan, K., Wirth, B. D. and Najm, H. N. Global sensitivity analysis of a coupled multiphysics model to predict surface evolution in fusion plasma-surface interactions. <i>Computational Materials Science</i> 226, 112229 (2023), pp. 1-24
           <a href="https://www.sciencedirect.com/science/article/abs/pii/S0927025623002239" class="badge text-bg-primary rounded-pill" style="margin-left: 10px; text-decoration:none">Article</a>
           <a href="https://arxiv.org/abs/2302.08630" class="badge text-bg-success rounded-pill" style="margin-left: 10px; text-decoration:none">Preprint</a>
-          <a href="https://scholar.google.com/scholar?q=Global+sensitivity+analysis+of+a+coupled+multiphysics+model+to+predict+surface+evolution+in+fusion+plasma-surface+interactions" class="badge text-bg-secondary rounded-pill" style="margin-left: 10px; text-decoration:none">Cite</a>
+          <a href="#" class="badge text-bg-secondary rounded-pill cite-button" data-bs-toggle="modal" data-bs-target="#bibtexModal" data-bibtex="@article{robbe2023,\n  title   = {Global sensitivity analysis of a coupled multiphysics model to predict surface evolution in fusion plasma-surface interactions},\n  author  = {Robbe, Pieterjan and Blondel, Sophie and Casey, Tiernan A and Lasa, Ane and Sargsyan, Khachik and Wirth, Brian D and Najm, Habib N},\n  journal = {Computational Materials Science},\n  volume  = {226},\n  pages   = {112229},\n  year    = {2023}\n }" style="margin-left: 10px; text-decoration: none;">Cite</a>
         </li>
         <li class="mt-2">
           Mortier, B.&ast;, <b>Robbe, P.</b>&ast;, Baelmans, M., and Samaey, G. Multilevel asymptotic-preserving Monte Carlo for kinetic-diffusive particle simulations of the Boltzmann-BGK equation. <i>Journal of Computational Physics</i>, 450, 110736 (2022), pp. 1-36
           <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999121006318" class="badge text-bg-primary rounded-pill" style="margin-left: 10px; text-decoration:none">Article</a>
-          <a href="https://scholar.google.com/scholar?q=Multilevel+asymptotic-preserving+Monte+Carlo+for+kinetic-diffusive+particle+simulations+of+the+Boltzmann-BGK+equation" class="badge text-bg-secondary rounded-pill" style="margin-left: 10px; text-decoration:none">Cite</a>
+          <a href="#" class="badge text-bg-secondary rounded-pill cite-button" data-bs-toggle="modal" data-bs-target="#bibtexModal" data-bibtex="@article{mortier2022,\n  title   = {Multilevel asymptotic-preserving {M}onte {C}arlo for kinetic-diffusive particle simulations of the {B}oltzmann-{BGK} equation},\n  author  = {Mortier, Bert and Robbe, Pieterjan and Baelmans, Martine and Samaey, Giovanni},\n  journal = {Journal of Computational Physics},\n  volume  = {450},\n  pages   = {110736},\n  year    = {2022}\n }" style="margin-left: 10px; text-decoration: none;">Cite</a>
         </li>
         <li class="mt-2">
           Blondeel, P., <b>Robbe, P.</b>, Fran&ccedil;ois, S., Lombaert, G., and Vandewalle, S. An overview of p-refined multilevel quasi-Monte Carlo applied to the geotechnical slope stability problem. In <i>Proceedings of the 6th ECCOMAS Young Investigators Conference (ECCOMAS-YIC)</i> (2021), <i>Editorial Universitat Polit&#232;cnica de Val&#232;ncia</i>, pp. 25-35.
           <a href="https://riunet.upv.es/handle/10251/186593" class="badge text-bg-primary rounded-pill" style="margin-left: 10px; text-decoration:none">Article</a>
-          <a href="https://scholar.google.com/scholar?q=An+overview+of+p-refined+multilevel+quasi-Monte+Carlo+applied+to+the+geotechnical+slope+stability+problem" class="badge text-bg-secondary rounded-pill" style="margin-left: 10px; text-decoration:none">Cite</a>
+          <a href="#" class="badge text-bg-secondary rounded-pill cite-button" data-bs-toggle="modal" data-bs-target="#bibtexModal" data-bibtex="@inproceedings{blondeel2022b,\n  title     = {An overview of p-refined multilevel quasi-{M}onte {C}arlo applied to the geotechnical slope stability problem},\n  author    = {Blondeel, Philippe and Robbe, Pieterjan and Fran{\c{c}}ois, Stijn and Lombaert, Geert and Vandewalle, Stefan},\n  booktitle = {Proceedings of the \\nth{6} ECCOMAS Young Investigators Conference (YIC)},\n  pages     = {25--35},\n  year      = {2022}\n }" style="margin-left: 10px; text-decoration: none;">Cite</a>
         </li>
         <li class="mt-2">
           Blondeel, P., <b>Robbe, P.</b>, Fran&ccedil;ois, S., Lombaert, G., and Vandewalle, S. Improving the rate of convergence of the quasi-Monte Carlo method in estimating expectations on a geotechnical slope stability problem. In <i>Proceedings of the 4th ECCOMAS Thematic Conference on Uncertainty Quantification in Computational Sciences and Engineering (ECCOMAS)</i> (2021) 
           <a href="https://www.eccomasproceedia.org/conferences/thematic-conferences/uncecomp-2021/8032" class="badge text-bg-primary rounded-pill" style="margin-left: 10px; text-decoration:none">Article</a>
-          <a href="https://scholar.google.com/scholar?q=Improving+the+rate+of+convergence+of+the+quasi-Monte+Carlo+method+in+estimating+expectations+on+a+geotechnical+slope+stability+problem" class="badge text-bg-secondary rounded-pill" style="margin-left: 10px; text-decoration:none">Cite</a>
+          <a href="#" class="badge text-bg-secondary rounded-pill cite-button" data-bs-toggle="modal" data-bs-target="#bibtexModal" data-bibtex="@inproceedings{blondeel2021,\n  title     = {Improving the rate of convergence of the quasi-{M}onte {C}arlo method in estimating expectations on a geotechnical slope stability problem},\n  author    = {Blondeel, Philippe and Robbe, Pieterjan and Nuyens, Dirk and Lombaert, Geert and Vandewalle, Stefan},\n  booktitle = {Proceedings of the \\nth{4} ECCOMAS Thematic Conference on Uncertainty Quantification in Computational Sciences and Engineering},\n  editor    = {Papadrakakis, Manolis and Papadopoulos, Vassilios and Stefanou, George},\n  pages     = {194--208},\n  year      = {2021}\n }" style="margin-left: 10px; text-decoration: none;">Cite</a>
         </li>
         <li class="mt-2">
           Blondeel, P., <b>Robbe, P.</b>, Fran&ccedil;ois, S., Lombaert, G., and Vandewalle, S. A p-refined multilevel quasi-Monte Carlo method with supermesh construction applied to a geotechnical slope stability problem. In <i>Proceedings of the 13th International Conference on Structural Safety and Reliability (ICOSSAR)</i> (2021) 
           <a href="https://lirias.kuleuven.be/retrieve/675146" class="badge text-bg-primary rounded-pill" style="margin-left: 10px; text-decoration:none">Article</a>
-          <a href="https://scholar.google.com/scholar?q=A+p-refined+multilevel+quasi-Monte+Carlo+method+with+supermesh+construction+applied+to+a+geotechnical+slope+stability+problem" class="badge text-bg-secondary rounded-pill" style="margin-left: 10px; text-decoration:none">Cite</a>
+          <a href="#" class="badge text-bg-secondary rounded-pill cite-button" data-bs-toggle="modal" data-bs-target="#bibtexModal" data-bibtex="@inproceedings{blondeel2022a,\n  title     = {A p-refined multilevel quasi-{M}onte {C}arlo method with supermesh construction applied to a geotechnical slope stability problem},\n  author    = {Blondeel, Philippe and Robbe, Pieterjan and Fran{\c{c}}ois, Stijn and Lombaert, Geert and Vandewalle, Stefan},\n  editor    = {Li, Jie and Spanos, Pol D and Chen, J B and Peng Y B},\n  booktitle = {Proceedings of the \\nth{13} International Conference on Structural Safety and Reliability (ICOSSAR)},\n  pages     = {1--11},\n  year      = {2022}\n }" style="margin-left: 10px; text-decoration: none;">Cite</a>
         </li>
         <li class="mt-2">
           Blondeel, P., <b>Robbe, P.</b>, Fran&ccedil;ois, S., Lombaert, G., and Vandewalle, S. Benchmarking the p-MLQMC method on a geotechnical engineering problem. In <i>Proceedings of the 14th World Congress on Computational Mechanics and ECCOMAS Congress</i> (2021) 
           <a href="https://www.scipedia.com/public/Blondeel_et_al_2021a" class="badge text-bg-primary rounded-pill" style="margin-left: 10px; text-decoration:none">Article</a>
-          <a href="https://scholar.google.com/scholar?q=enchmarking+the+p-MLQMC+method+on+a+geotechnical+engineering+problem" class="badge text-bg-secondary rounded-pill" style="margin-left: 10px; text-decoration:none">Cite</a>
+          <a href="#" class="badge text-bg-secondary rounded-pill cite-button" data-bs-toggle="modal" data-bs-target="#bibtexModal" data-bibtex="@inproceedings{blondeel2020b,\n  title     = {Benchmarking the p-{MLQMC} method on a geotechnical engineering problem},\n  author    = {Blondeel, P and Robbe, P and Fran{\c{c}}ois, S and Lombaert, G and Vandewalle, S},\n  booktitle = {Proceedings of the \\nth{14} World Congress on Computational Mechanics (WCCM) and ECCOMAS Congress},\n  editor    = {Chinesta, Francisco and Abgrall, R\'{e}my and Allix, Olivier and Kaliske, Michael},\n  pages     = {1--12},\n  year      = {2020}\n }" style="margin-left: 10px; text-decoration: none;">Cite</a>
         </li>
         <li class="mt-2">
           Blondeel, P., <b>Robbe, P.</b>, Van hoorickx, C., Fran&ccedil;ois, S., Lombaert, G., and Vandewalle, S. p-Refined Multilevel Quasi-Monte Carlo for Galerkin Finite Element Methods with Applications in Civil Engineering. <i>Algorithms</i> 13, 5 (2020), pp. 1-30
           <a href="https://www.mdpi.com/1999-4893/13/5/110" class="badge text-bg-primary rounded-pill" style="margin-left: 10px; text-decoration:none">Article</a>
-          <a href="https://scholar.google.com/scholar?q=p-Refined+Multilevel+Quasi-Monte+Carlo+for+Galerkin+Finite+Element+Methods+with+Applications+in+Civil+Engineering" class="badge text-bg-secondary rounded-pill" style="margin-left: 10px; text-decoration:none">Cite</a>
+          <a href="#" class="badge text-bg-secondary rounded-pill cite-button" data-bs-toggle="modal" data-bs-target="#bibtexModal" data-bibtex="@article{blondeel2020a,\n  title   = {p-refined multilevel quasi-{M}onte {C}arlo for {G}alerkin finite element methods with applications in civil engineering},\n  author  = {Blondeel, Philippe and Robbe, Pieterjan and Van hoorickx, C{\'e}dric and Fran{\c{c}}ois, Stijn and Lombaert, Geert and Vandewalle, Stefan},\n  journal = {Algorithms},\n  volume  = {13},\n  number  = {5},\n  pages   = {110},\n  year    = {2020}\n }" style="margin-left: 10px; text-decoration: none;">Cite</a>
         </li>
         <li class="mt-2">
           <b>Robbe, P.</b>, Nuyens, D., and Vandewalle, S. Enhanced Multi-Index Monte Carlo by means of Multiple Semi-Coarsened Multigrid for Anisotropic Diffusion Problems. <i>Numerical Linear Algebra with Applications</i> 28, 3 (2020), e2281
           <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/nla.2281" class="badge text-bg-primary rounded-pill" style="margin-left: 10px; text-decoration:none">Article</a>
           <a href="https://arxiv.org/abs/1907.12334" class="badge text-bg-success rounded-pill" style="margin-left: 10px; text-decoration:none">Preprint</a>
-          <a href="https://scholar.google.com/scholar?q=Enhanced+Multi-Index+Monte+Carlo+by+means+of+Multiple+Semi-Coarsened+Multigrid+for+Anisotropic+Diffusion+Problems" class="badge text-bg-secondary rounded-pill" style="margin-left: 10px; text-decoration:none">Cite</a>
+          <a href="#" class="badge text-bg-secondary rounded-pill cite-button" data-bs-toggle="modal" data-bs-target="#bibtexModal" data-bibtex="@article{robbe2021,\n  title   = {Enhanced multi-index {M}onte {C}arlo by means of multiple semicoarsened multigrid for anisotropic diffusion problems},\n  author  = {Robbe, Pieterjan and Nuyens, Dirk and Vandewalle, Stefan},\n  journal = {Numerical Linear Algebra with Applications},\n  volume  = {28},\n  number  = {3},\n  pages   = {e2281},\n  year    = {2021}\n }" style="margin-left: 10px; text-decoration: none;">Cite</a>
         </li>
         <li class="mt-2">
           Blondeel, P., <b>Robbe, P.</b>, Fran&ccedil;ois, S., Lombaert, G., and Vandewalle, S. On the selection of random field evaluation points in the p-MLQMC method. In <i>Monte Carlo and Quasi-Monte Carlo Methods</i> (2020), Keller, A., eds., <i>Springer Proceedings in Mathematics &amp; Statistics</i>, vol. 387, pp. 185-203
           <a href="https://link.springer.com/chapter/10.1007/978-3-030-98319-2_9" class="badge text-bg-primary rounded-pill" style="margin-left: 10px; text-decoration:none">Article</a>
           <a href="https://arxiv.org/abs/2012.08189" class="badge text-bg-secondary rounded-pill" style="margin-left: 10px; text-decoration:none">Preprint</a>
-          <a href="https://scholar.google.com/scholar?q=On+the+selection+of+random+field+evaluation+points+in+the+p-MLQMC+method" class="badge text-bg-secondary rounded-pill" style="margin-left: 10px; text-decoration:none">Cite</a>
+          <a href="#" class="badge text-bg-secondary rounded-pill cite-button" data-bs-toggle="modal" data-bs-target="#bibtexModal" data-bibtex="@inproceedings{blondeel2020,\n  title     = {On the selection of random field evaluation points in the p-{MLQMC} method},\n  author    = {Blondeel, Philippe and Robbe, Pieterjan and Fran{\c{c}}ois, Stijn and Lombaert, Geert and Vandewalle, Stefan},\n  booktitle = {International Conference on Monte Carlo and Quasi-Monte Carlo Methods in Scientific Computing},\n  editor    = {Keller, Alexander},\n  pages     = {185--203},\n  year      = {2020}\n }" style="margin-left: 10px; text-decoration: none;">Cite</a>
         </li>
         <li class="mt-2">
           <b>Robbe, P.</b> Multilevel Uncertainty Quantification Methods for Robust Design of Industrial Applications. Vandewalle, S., and Nuyens, D., supervisors. <i>PhD thesis</i>, KU Leuven (2019)
           <a href="https://kuleuven.limo.libis.be/discovery/search?query=any,contains,LIRIAS2874148&tab=LIRIAS&search_scope=lirias_profile&vid=32KUL_KUL:Lirias&offset=0" class="badge text-bg-primary rounded-pill" style="margin-left: 10px; text-decoration:none">Article</a>
-          <a href="https://scholar.google.com/scholar?q=Multilevel+Uncertainty+Quantification+Methods+for+Robust+Design+of+Industrial+Applications" class="badge text-bg-secondary rounded-pill" style="margin-left: 10px; text-decoration:none">Cite</a>
+          <a href="#" class="badge text-bg-secondary rounded-pill cite-button" data-bs-toggle="modal" data-bs-target="#bibtexModal" data-bibtex="@phdthesis{robbe2019b,\n  title  = {Multilevel {U}ncertainty {Q}uantification {M}ethods for {R}obust {D}esign of {I}ndustrial {A}pplications},\n  author = {Robbe, Pieterjan},\n  school = {KU Leuven},\n  year   = {2019}\n }" style="margin-left: 10px; text-decoration: none;">Cite</a>
         </li>
         <li class="mt-2">
           <b>Robbe, P.</b>, Nuyens, D., and Vandewalle, S. Recycling Samples in the Multigrid Multilevel Quasi-Monte Carlo Method. <i>SIAM Journal on Scientific Computing</i> 41, 5 (2019), S37-S60
           <a href="https://epubs.siam.org/doi/10.1137/18M1194031" class="badge text-bg-primary rounded-pill" style="margin-left: 10px; text-decoration:none">Article</a>
           <a href="https://arxiv.org/abs/1806.05619" class="badge text-bg-success rounded-pill" style="margin-left: 10px; text-decoration:none">Preprint</a>
-          <a href="https://scholar.google.com/scholar?q=Recycling+Samples+in+the+Multigrid+Multilevel+Quasi-Monte+Carlo+Method" class="badge text-bg-secondary rounded-pill" style="margin-left: 10px; text-decoration:none">Cite</a>
+          <a href="#" class="badge text-bg-secondary rounded-pill cite-button" data-bs-toggle="modal" data-bs-target="#bibtexModal" data-bibtex="@article{robbe2019a,\n  title   = {Recycling samples in the multigrid multilevel (quasi-){M}onte {C}arlo method},\n  author  = {Robbe, Pieterjan and Nuyens, Dirk and Vandewalle, Stefan},\n  journal = {SIAM Journal on Scientific Computing},\n  volume  = {41},\n  number  = {5},\n  pages   = {S37--S60},\n  year    = {2019}\n }" style="margin-left: 10px; text-decoration: none;">Cite</a>
         </li>
         <li class="mt-2">
           Blondeel, P., <b>Robbe, P.</b>, Vanhoorickx, C., Lombaert, G., and Vandewalle, S. Multilevel Sampling with Monte Carlo and Quasi-Monte Carlo Methods for Uncertainty Quantification in Structural Engineering. In <i>Proceedings of the 13th International Conference on Applications of Statistics and Probability in Civil Engineering</i> (ICASP13) (2019)
           <a href="https://s-space.snu.ac.kr/bitstream/10371/153300/1/85.pdf" class="badge text-bg-primary rounded-pill" style="margin-left: 10px; text-decoration:none">Article</a>
-          <a href="https://scholar.google.com/scholar?q=Multilevel+Sampling+with+Monte+Carlo+and+Quasi-Monte+Carlo+Methods+for+Uncertainty+Quantification+in+Structural+Engineering" class="badge text-bg-secondary rounded-pill" style="margin-left: 10px; text-decoration:none">Cite</a>
+          <a href="#" class="badge text-bg-secondary rounded-pill cite-button" data-bs-toggle="modal" data-bs-target="#bibtexModal" data-bibtex="@inproceedings{blondeel2019,\n  title     = {Multilevel sampling with {M}onte {C}arlo and quasi-{M}onte {C}arlo methods for uncertainty quantification in structural engineering},\n  author    = {Blondeel, Philippe and Robbe, Pieterjan and Lombaert, Geert and Vandewalle, Stefan and others},\n  booktitle = {Proceedings of the \\nth{13} International Conference on Applications of Statistics and Probability in Civil Engineering, ICASP},\n  pages     = {1--8},\n  year      = {2019}\n }" style="margin-left: 10px; text-decoration: none;">Cite</a>
         </li>
         <li class="mt-2">
           Blondeel, P., <b>Robbe, P.</b>, Van hoorickx, C., Lombaert, G., and Vandewalle, S. Multilevel Monte Carlo Applied to a Structural Engineering Model with Random Material Parameters. In <i>Proceedings of the 28th edition of the Biennial ISMA conference on Noise and Vibration Engineering (ISMA)</i> (2018), Desmet, W., Pluymers, B., Moens, D., and Rottiers, W., eds., pp. 4899-4913
           <a href="https://past.isma-isaac.be/downloads/isma2018/abstracts/AbstractPage_ID177.pdf" class="badge text-bg-primary rounded-pill" style="margin-left: 10px; text-decoration:none">Article</a>
           <a href="https://arxiv.org/abs/1808.10680" class="badge text-bg-success rounded-pill" style="margin-left: 10px; text-decoration:none">Preprint</a>
-          <a href="https://scholar.google.com/scholar?q=Multilevel+Monte+Carlo+Applied+to+a+Structural+Engineering+Model+with+Random+Material+Parameters" class="badge text-bg-secondary rounded-pill" style="margin-left: 10px; text-decoration:none">Cite</a>
+          <a href="#" class="badge text-bg-secondary rounded-pill cite-button" data-bs-toggle="modal" data-bs-target="#bibtexModal" data-bibtex="@inproceedings{blondeel2018,\n  title     = {Multilevel {M}onte {C}arlo applied to a structural engineering model with random material parameters},\n  author    = {Blondeel, Philippe and Robbe, Pieterjan and Lombaert, Geert and Vandewalle, Stefan and others},\n  booktitle = {Proceedings of the \\nth{28} ISMA conference on Noise and Vibration Engineering},\n  editor    = {Moens, David and Desmet, Wim and Pluymers, Ben and Rottiers, Wim},\n  year      = {2018}\n }" style="margin-left: 10px; text-decoration: none;">Cite</a>
         </li>
         <li class="mt-2">
           <b>Robbe, P.</b>, Nuyens, D., and Vandewalle, S. A Dimension-Adaptive Multi-Index Monte Carlo Method Applied to a Model of a Heat Exchanger. In <i>Monte Carlo and Quasi-Monte Carlo Methods</i> (2018), Owen, A. B., and Glynn, P., eds., <i>Springer Proceedings in Mathematics &amp; Statistics</i>, vol. 241, pp. 429-445
           <a href="https://link.springer.com/chapter/10.1007/978-3-319-91436-7_24" class="badge text-bg-primary rounded-pill" style="margin-left: 10px; text-decoration:none">Article</a>
           <a href="https://arxiv.org/abs/1708.04959" class="badge text-bg-success rounded-pill" style="margin-left: 10px; text-decoration:none">Preprint</a>
-          <a href="https://scholar.google.com/scholar?q=A+Dimension-Adaptive+Multi-Index+Monte+Carlo+Method+Applied+to+a+Model+of+a+Heat+Exchanger" class="badge text-bg-secondary rounded-pill" style="margin-left: 10px; text-decoration:none">Cite</a>
+          <a href="#" class="badge text-bg-secondary rounded-pill cite-button" data-bs-toggle="modal" data-bs-target="#bibtexModal" data-bibtex="@inproceedings{robbe2016,\n  title     = {A dimension-adaptive multi-index {M}onte {C}arlo method applied to a model of a heat exchanger},\n  author    = {Robbe, Pieterjan and Nuyens, Dirk and Vandewalle, Stefan},\n  booktitle = {International Conference on Monte Carlo and Quasi-Monte Carlo Methods in Scientific Computing},\n  editor    = {Owen, Art and Glynn, Peter},\n  pages     = {429--445},\n  year      = {2016}\n }" style="margin-left: 10px; text-decoration: none;">Cite</a>
         </li>
         <li class="mt-2">
           <b>Robbe, P.</b>, Nuyens, D., and Vandewalle, S. A Multi-Index Quasi-Monte Carlo Algorithm for Lognormal Diffusion Problems. <i>SIAM Journal on Scientific Computing</i> 39, 5 (2017), S851-S872
           <a href="https://epubs.siam.org/doi/abs/10.1137/16M1082561" class="badge text-bg-primary rounded-pill" style="margin-left: 10px; text-decoration:none">Article</a>
           <a href="https://arxiv.org/abs/1608.03157" class="badge text-bg-success rounded-pill" style="margin-left: 10px; text-decoration:none">Preprint</a>
-          <a href="https://scholar.google.com/scholar?q=A+Multi-Index+Quasi-Monte+Carlo+Algorithm+for+Lognormal+Diffusion+Problems" class="badge text-bg-secondary rounded-pill" style="margin-left: 10px; text-decoration:none">Cite</a>
+          <a href="#" class="badge text-bg-secondary rounded-pill cite-button" data-bs-toggle="modal" data-bs-target="#bibtexModal" data-bibtex="@article{robbe2017,\n  title   = {A multi-index quasi-{M}onte {C}arlo algorithm for lognormal diffusion problems},\n  author  = {Robbe, Pieterjan and Nuyens, Dirk and Vandewalle, Stefan},\n  journal = {SIAM Journal on Scientific Computing},\n  volume  = {39},\n  number  = {5},\n  pages   = {S851--S872},\n  year    = {2017}\n }" style="margin-left: 10px; text-decoration: none;">Cite</a>
         </li>
       </ol>
+      <p>&ast; indicates equal contribution</p>
     </div>
 
     <div class="container py-3" id="software">
@@ -195,11 +234,15 @@
         <ul>
           <li class="mt-2">
             I implemented multilevel sampling methods in <a href="https://github.com/QMCSoftware/QMCSoftware">qmcpy</a>, the QMC community software package
-            <span style="margin-left: 10px" class="badge bg-warning-subtle border border-warning-subtle text-success-emphasis rounded-pill">Python</span>
+            <span style="margin-left: 10px" class="badge bg-warning-subtle border border-warning-subtle text-warning rounded-pill">Python</span>
           </li>
           <li class="mt-2">
-            I implemented an application for data-free inference in <a href="https://github.com/sandialabs/UQTk">UQTk</a>, Sandia Livermore's UQ package focussing on Polynomial Chaos expansions
+            I implemented an application for data-free inference in <a href="https://github.com/sandialabs/UQTk">UQTk</a>, Sandia Livermore's UQ package focussing on Polynomial Chaos Expansions
             <span style="margin-left: 10px" class="badge bg-success-subtle border border-success-subtle text-success-emphasis rounded-pill">C++</span>
+          </li>
+          <li class="mt-2">
+            See <a href="https://github.com/scikit-learn/scikit-learn/pull/27842">here</a> for my implementation of Polynomial Chaos Expansions in <a href="https://scikit-learn.org/stable/">scikit-learn</a>
+            <span style="margin-left: 10px" class="badge bg-warning-subtle border border-warning-subtle text-warning rounded-pill">Python</span>
           </li>
         </ul>
       </div>
@@ -223,7 +266,44 @@
       </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="bibtexModal" tabindex="-1" aria-labelledby="bibtexModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="bibtexModalLabel">BibTeX Citation</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <pre id="bibtexContent" style="white-space: pre-wrap;"></pre>
+              </div>
+          </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script>
+      // Function to set the theme based on the current time
+      function setTheme() {
+          const hour = new Date().getHours();
+          const theme = (hour >= 6 && hour < 18) ? "light" : "dark"; // Light theme from 6 AM to 6 PM
+          document.documentElement.setAttribute("data-bs-theme", theme);
+      }
+
+      // Set the theme on page load
+      setTheme();
+    </script>
+
+    <script>
+      // Event listener for the cite buttons
+      document.querySelectorAll(".cite-button").forEach(button => {
+          button.addEventListener("click", function() {
+              const bibtex = this.getAttribute("data-bibtex");
+              const formattedBibtex = bibtex.replace(/\\n /g, "<br>");
+              document.getElementById("bibtexContent").innerHTML = formattedBibtex;
+          });
+      });
+    </script>
   </body>
 </html>
